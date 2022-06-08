@@ -62,11 +62,12 @@ function Todo() {
         value={filter}
       />
 
-      {items.map(item => (
-        <TodoItem 
-        key = {item.key} 
-        item = {item}
-        onCheck={handleCheck}/>
+      {displayItems.map(item => (
+        <TodoItem
+          key={item.key}
+          item={item}
+          onCheck={handleCheck}
+        />
       ))}
       <div className="panel-block">
         {items.length} items
